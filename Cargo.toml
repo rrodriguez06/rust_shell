@@ -1,0 +1,16 @@
+[package]
+name = "cli"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+crossterm = { version = "0.19", features = [ "serde" ] }
+execute = "0.2.11"
+tui = { version = "0.14", default-features = false, features = ['crossterm', 'serde'] }
+tokio = { version = "1", features = ["full"] }
+
+lib_app = { path = "./libs/app" }
+lib_shell = { path = "./libs/shell/" }
+lib_ui = { path = "./libs/ui/" }
